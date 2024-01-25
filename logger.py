@@ -3,14 +3,14 @@
 import logging
 from datetime import datetime
 
-from ngsconfig import DIR_LOG, NAME_PROJECT
+from ngsconfig import DIR_LOG, PROJECT_NAME
 
 START_PROGRAM = datetime.now()
 DATE_START_PROGRAM = START_PROGRAM.strftime('%Y-%m-%d')
 HOUR_START_PROGRAM = START_PROGRAM.strftime('%H:%M:%S')
 
 logging.basicConfig(
-    filename=f'{DIR_LOG}{NAME_PROJECT}_{DATE_START_PROGRAM}.log',
+    filename=f'{DIR_LOG}{PROJECT_NAME}_{DATE_START_PROGRAM}.log',
     filemode='a',
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     level=logging.INFO,

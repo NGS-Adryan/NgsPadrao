@@ -3,10 +3,10 @@
 from configparser import ConfigParser
 from crypto import decrypt_password
 
-NAME_PROJECT = 'NgsPadrao'
+PROJECT_NAME = 'NgsPadrao'
 
 CONFIG = ConfigParser()
-CONFIG.read(f'{NAME_PROJECT}.ini')
+CONFIG.read(f'{PROJECT_NAME}.ini')
 
 NGS_CONFIG = CONFIG['config']
 EMP, DIR_LOG = NGS_CONFIG['emp'], NGS_CONFIG['diretorio_log']
