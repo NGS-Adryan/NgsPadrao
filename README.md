@@ -36,3 +36,9 @@ pip install cryptography oracledb
 ```bash
 pip freeze > requirements.txt
 ```
+
+## Gerar o executável
+
+```bash
+pyinstaller --onefile main.py --icon icon.ico -n NgsPadrao
+```
