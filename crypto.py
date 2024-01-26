@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
 """
-    Arquivo contendo função para descriptografar a senha do banco
+    Arquivo contendo função para descriptografar a senha do banco vindo
+do arquivo .ini e token.key
 """
 
 from cryptography.fernet import Fernet

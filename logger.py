@@ -1,5 +1,17 @@
 # -*- coding: utf-8 -*-
 
+"""
+    Arquivo contendo configurações e função para printar no terminal
+e escrever no arquivo f'{PROJECT_NAME}_{DATE_START_PROGRAM}.log'
+
+   =|=-*-=-*-=-*-=-*-=*-=-*-=-*-=-*-=-*-=-*-=-*-=|=
+    |  Variáveis:                                |
+    |    PROJECT_NAME: Nome do projeto           |
+    |    DATE_START_PROGRAM: Data da execução    |
+   =|=-*-=-*-=-*-=-*-=*-=-*-=-*-=-*-=-*-=-*-=-*-=|=
+
+"""
+
 import logging
 from datetime import datetime
 

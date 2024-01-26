@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
 """
-    Arquivo contendo conexão com banco de dados Oracle
+    Arquivo contendo conexão com banco de dados Oracle e execução das
+querys do arquivo dbquerys
 """
 
 from oracledb import init_oracle_client, makedsn, connect

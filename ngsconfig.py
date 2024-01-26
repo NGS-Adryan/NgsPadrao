@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
 
+"""
+    Arquivo que le o arquivo f'{PROJECT_NAME}.ini'
+"""
+
 from configparser import ConfigParser
 from crypto import decrypt_password
 
