@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
 
+"""
+    Arquivo contendo função para descriptografar a senha do banco
+"""
+
 from cryptography.fernet import Fernet
 
 def decrypt_password(encrypted_password: bytes) -> str:

@@ -1,9 +1,13 @@
 # -*- coding: utf-8 -*-
 
+"""
+    Arquivo contendo conexão com banco de dados Oracle
+"""
+
 from oracledb import init_oracle_client, makedsn, connect
 
 from ngsconfig import CLIENT, HOST, PORT, SERVICE, ORACLE_USER, ORACLE_PASS
-from dbquerys import *
+from dbquerys import QUERY_TEST
 
 init_oracle_client(lib_dir=CLIENT)
 DSN = makedsn(host=HOST, port=PORT, service_name=SERVICE)
