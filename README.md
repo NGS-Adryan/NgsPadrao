@@ -5,13 +5,13 @@
 * Criar o ambiente
 
 ```cmd
-python -m venv venv
+python -m venv python
 ```
 
 * Ativar o ambiente no *windows*
 
 ```bash
-.\venv\Scripts\activate
+.\python\Scripts\activate
 ```
 
 * Desativar o ambiente
@@ -37,8 +37,14 @@ pip install cryptography oracledb
 pip freeze > requirements.txt
 ```
 
+## Instalar com base no arquivo *requirements.txt*
+
+```bash
+pip install -r requirements.txt
+```
+
 ## Gerar o executável
 
 ```bash
-pyinstaller --onefile main.py --icon icon.ico -n NgsPadrao
+pyinstaller --onefile main.py --icon icon.ico -n # filename_exe
 ```
