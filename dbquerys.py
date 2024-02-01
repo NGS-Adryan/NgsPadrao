@@ -1,8 +1,14 @@
 # -*- coding: utf-8 -*-
 
 """
-    Arquivo contendo as querys para serem executadas pelo arquivo
-_database.py_ que contem a lógica de conexão com banco Oracle
+    Arquivo contendo todos os comandos sql para serem executados no
+`database.py`.
+
+Querys
+----
+
+>>> QUERY_TEST = "SELECT SYSDATE FROM DUAL"
+
 """
 
-QUERY_TEST = 'SELECT SYSDATE FROM DUAL'
+QUERY_TEST = "SELECT SYSDATE FROM DUAL"
