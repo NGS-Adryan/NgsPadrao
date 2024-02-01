@@ -1,8 +1,14 @@
 # -*- coding: utf-8 -*-
 
 """
-    Arquivo contendo conexão com banco de dados Oracle e execução das
-querys do arquivo dbquerys
+    Arquivo encarregado de lidar com o banco de dados, fazendo a conexão
+e executando as querys do arquivo `dbquerys.py`.
+
+Funções
+-----
+
+>>> def test_connection() -> bool: # Testa o banco.
+
 """
 
 from oracledb import init_oracle_client, makedsn, connect
@@ -14,10 +20,10 @@ init_oracle_client(lib_dir=CLIENT)
 DSN = makedsn(host=HOST, port=PORT, service_name=SERVICE)
 
 def test_connection() -> bool:
-    """Função para testar se está funcionando o banco
+    """Função para testar se está funcionando a conexão com o banco.
 
     Returns:
-        bool: Se está ou não funcionando
+        bool: Se está ou não funcionando.
     """
     with connect(DSN, user=ORACLE_USER, password=ORACLE_PASS) as CONNECTION:
         with CONNECTION.cursor() as CURSOR:
@@ -25,5 +31,5 @@ def test_connection() -> bool:
             return True if CURSOR.fetchall() else False
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(test_connection())
