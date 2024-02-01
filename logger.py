@@ -2,13 +2,19 @@
 
 """
     Arquivo contendo configurações e função para printar no terminal
-e escrever no arquivo f'{PROJECT_NAME}_{DATE_START_PROGRAM}.log'
+e escrever no arquivo:
 
-   =|=-*-=-*-=-*-=-*-=*-=-*-=-*-=-*-=-*-=-*-=-*-=|=
-    |  Variáveis:                                |
-    |    PROJECT_NAME: Nome do projeto           |
-    |    DATE_START_PROGRAM: Data da execução    |
-   =|=-*-=-*-=-*-=-*-=*-=-*-=-*-=-*-=-*-=-*-=-*-=|=
+```python
+DIR_LOG = "c:/ngs/services/logs/"
+filename: f"{DIR_LOG}{PROJECT_NAME}_{DATE_START_PROGRAM}.log"
+```
+----
+* `PROJECT_NAME`: Nome do projeto
+* `DATE_START_PROGRAM`: Data da execução
+----
+Utilizando a função: `log_and_print()`.
+
+>>> log_and_print("teste") -> teste
 
 """
 
@@ -18,15 +24,15 @@ from datetime import datetime
 from ngsconfig import DIR_LOG, PROJECT_NAME
 
 START_PROGRAM = datetime.now()
-DATE_START_PROGRAM = START_PROGRAM.strftime('%Y-%m-%d')
-HOUR_START_PROGRAM = START_PROGRAM.strftime('%H:%M:%S')
+DATE_START_PROGRAM = START_PROGRAM.strftime("%Y-%m-%d")
+HOUR_START_PROGRAM = START_PROGRAM.strftime("%H:%M:%S")
 
 logging.basicConfig(
-    filename=f'{DIR_LOG}{PROJECT_NAME}_{DATE_START_PROGRAM}.log',
-    filemode='a',
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    filename=f"{DIR_LOG}{PROJECT_NAME}_{DATE_START_PROGRAM}.log",
+    filemode="a",
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     level=logging.INFO,
-    datefmt='%d-%b-%y %H:%M:%S'
+    datefmt="%d-%b-%y %H:%M:%S"
 )
 
 def log_and_print(msg: str, level: int=logging.INFO) -> None:
@@ -53,5 +59,5 @@ def log_and_print(msg: str, level: int=logging.INFO) -> None:
             return logging.debug(msg)
 
 
-if __name__ == '__main__':
-    log_and_print('teste')
+if __name__ == "__main__":
+    log_and_print("teste")
