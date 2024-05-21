@@ -16,5 +16,5 @@ def main():
     lprint(f"{pname} iniciado. Versão: {__version__}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
