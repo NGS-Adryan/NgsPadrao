@@ -1,14 +1,3 @@
-# -*- coding: utf-8 -*-
-
-"""
-    Arquivo contendo todos os comandos sql para serem executados no
-`database.py`.
-
-Querys
-----
-
->>> QUERY_TEST = "SELECT SYSDATE FROM DUAL"
-
-"""
+"""Arquivo contendo todas as querys para ser usado no `database.py`."""
 
 QUERY_TEST = "SELECT SYSDATE FROM DUAL"
