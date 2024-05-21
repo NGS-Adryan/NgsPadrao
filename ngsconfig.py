@@ -47,7 +47,7 @@ def write_log(text: str, level: int = log.INFO):
             return log.debug(text)
 
 
-def log_and_print(text: str, level: int = log.INFO, end = "\n"):
+def log_and_print(text: str, level: int = log.INFO, end: str = "\n"):
     """Escreve no arquivo de logs e printar no terminal.
 
     :param text: str - Menssagem a ser printada e inserida no log.
