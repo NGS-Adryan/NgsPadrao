@@ -9,6 +9,7 @@ from dbquerys import QUERY_TEST
 init_oracle_client(lib_dir=CLIENT)
 DSN = makedsn(host=HOST, port=PORT, service_name=SERVICE)
 
+
 def test_connection() -> bool:
     """Função para testar se está funcionando a conexão com o banco.
 
